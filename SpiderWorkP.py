@@ -30,7 +30,7 @@ class SpiderWork(object):
         server_addr = '111.231.143.45'
         print('Connect to server %s...' % server_addr)
         # 端口和验证口令注意保持与服务进程设置的完全一致:
-        self.m = BaseManager(address=(server_addr, 8011), authkey=b'woshinibaba')
+        self.m = BaseManager(address=(server_addr, 8011), authkey=b'testabcd_123')
         # 从网络连接:
         self.m.connect()
         # 实现第三步：获取Queue的对象:
@@ -332,9 +332,9 @@ if __name__=="__main__":
         spider.crawl()
         spider.driver.quit()
         python = os.sys.executable
-        os.execl(python, 'python3.5', *os.sys.argv)
+        os.execl(python, 'python3.6', *os.sys.argv)
     except (Exception) as e:
         print(e)
         python = os.sys.executable
-        os.execl(python, 'python3.5', *os.sys.argv)
+        os.execl(python, 'python3.6', *os.sys.argv)
         print("重新启动爬虫")

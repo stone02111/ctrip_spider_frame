@@ -29,7 +29,7 @@ class SpiderWork(object):
         server_addr = '127.0.0.1'
         print('Connect to server %s...' % server_addr)
         # 端口和验证口令注意保持与服务进程设置的完全一致:
-        self.m = BaseManager(address=(server_addr, 8011), authkey=b'woshinibaba')
+        self.m = BaseManager(address=(server_addr, 8011), authkey=b'testabcd_123')
         # 从网络连接:
         self.m.connect()
         # 实现第三步：获取Queue的对象:
